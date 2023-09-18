@@ -1,0 +1,9 @@
+From this workshop, I learned how to properly format my code to be modular. I separated my code into two  types of files, the header file (files ending in .h) and the implementation file(files ending in .cpp). In the header file, I put the function name and its signature while in the implementation file I put the definition of those functions.
+
+ Also in the header file, I learned about compiler safeguards, a way to prevent multiple definitions for a single function and causing an error for the compiler.
+
+In the implementation file, the libraries to be used are added in here together with the macros with the exception that if the macros are used in the header file it can be added in the header file.
+
+The trouble I had with this workshop is I forgot about strings and their null terminator. When I was trying to store the data from phone.txt, I kept getting the wrong area Code, prefix, and number. This was because I was giving the character array the wrong size. I needed to add  the null terminator as the null terminator is the key element that differentiates a regular character array from a string. 
+
+Other than my struggle with strings, the workshop was very straightforward in helping me learn about  neat and proper formatting for a modular program.
