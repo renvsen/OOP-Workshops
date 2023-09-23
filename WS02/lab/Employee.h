@@ -37,5 +37,5 @@ namespace sdds {
    // TODO: Declare the prototype for the deallocateMemory function that
    // first will deallocate all the names in the employee elements
    // then it will deallocate the employee array 
-   
+}
 #endif // SDDS_EMPLOYEE_H_
