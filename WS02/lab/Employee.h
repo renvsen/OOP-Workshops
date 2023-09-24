@@ -29,6 +29,7 @@ namespace sdds {
     //sorts the dynamic array of employees based on the GPA of the employees.
     void sort();
 
+<<<<<<< HEAD
     // loads a employee structue with its values from the file
     bool load(Employee& employ);
 
@@ -47,3 +48,13 @@ namespace sdds {
     void deallocateMemory();
 }
 #endif // SDDS_EMPLOYEE_H_
+=======
+   // TODO: Declare the prototype for the display function that 
+   // first sorts the employees then displays all the employees on the screen
+   
+   // TODO: Declare the prototype for the deallocateMemory function that
+   // first will deallocate all the names in the employee elements
+   // then it will deallocate the employee array 
+}
+#endif // SDDS_EMPLOYEE_H_
+>>>>>>> 34405a4e6b4ee9c219090f2580f0318e6b6e8587
