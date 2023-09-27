@@ -1,6 +1,7 @@
 # Workshop #2: Dynamic Memory, References, Overloading
 
 - *Version 1.0*
+- *Version 1.1* (DIY main.cpp was modified to match the sample output. This will not change the functionality of the workshop.)
 
 
 In this workshop, you will use *references* to modify the content of variables in other scopes, overload functions, allocate memory at run-time and deallocate that memory when it is no longer required. 

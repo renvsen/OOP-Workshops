@@ -1,5 +1,6 @@
 # Workshop #3: Member Functions and Privacy
 * version 1.0  
+* version 1.1 (corrected the invalid empty state message)
 
 In this workshop, you will encapsulate a Train using the name, departure time and number of passengers. You will use member functions, privacy, safe empty state and dynamic memory allocation to complete your work.
 
@@ -168,12 +169,12 @@ NUMBER OF PASSENGERS  : 9999
 DEPARTURE TIME        : 9999
 ```
 Otherwise it will print:
-`Train in Empty State!`
+`Train in an invalid State!`
 
 
 ## Testing Program
 
-[main.cpp](lab\main.cpp)
+[main.cpp](lab/main.cpp)
 
 ## Sample Output
 
