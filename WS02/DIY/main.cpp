@@ -17,20 +17,18 @@
 #include "Population.h"
 using namespace sdds;
 int main() {
-<<<<<<< Updated upstream
+
    char code[4]{};
    while(getPostalCode(code)) {
       if(load("PCpopulationsComplete.csv", code)) {
          display();
       }
       deallocateMemory();
-=======
 
-   if (load("PCpopulations.csv")) {
+        if (load("PCpopulations.csv")) {
        
-    display();
+         display();
 
->>>>>>> Stashed changes
-   }
+         }
    return 0;
 }
