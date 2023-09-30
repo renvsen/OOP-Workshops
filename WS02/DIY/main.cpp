@@ -17,18 +17,19 @@
 #include "Population.h"
 using namespace sdds;
 int main() {
-
    char code[4]{};
-   while(getPostalCode(code)) {
-      if(load("PCpopulationsComplete.csv", code)) {
-         display();
-      }
-      deallocateMemory();
+   while (getPostalCode(code)) {
+       if (load("PCpopulationsComplete.csv", code)) {
+           display();
+       }
+       deallocateMemory();
 
-        if (load("PCpopulations.csv")) {
-       
-         display();
+       if (load("PCpopulations.csv")) {
 
-         }
-   return 0;
+           display();
+
+       }
+
+       return 0;
+   }
 }
