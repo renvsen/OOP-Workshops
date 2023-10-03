@@ -88,6 +88,8 @@ namespace sdds {
 
        }
 
+       cout << nFound << endl;
+
        populate = new int[nFound];
 
        for (int i = 0; i < noOfRegions; i++)
@@ -109,7 +111,6 @@ namespace sdds {
        {
            noOfRegions = noOfRecords();
            
-
            regions = new Region[noOfRegions];
 
            for (int i = 0; i < noOfRegions; i++)
@@ -142,7 +143,7 @@ namespace sdds {
        // return the combined success result of the three read functions. These read 
        // functions should set the properties of the reference argument of the load function
 
-       if (read(region.postal) && read(region.population))
+       if (read(region.postal) && read(region.population)) 
        {
            ok = true;
        }
@@ -215,7 +216,7 @@ namespace sdds {
        }
        delete[] regions;
 
-       /*delete[] populate;*/
+       delete[] populate;
 
 
        

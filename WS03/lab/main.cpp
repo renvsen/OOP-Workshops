@@ -14,8 +14,8 @@
 #include <iostream>
 #include <cstring>
 #include <iomanip>
-using namespace std;
 #include "Train.h"
+using namespace std;
 using namespace sdds;
 
 int main() {

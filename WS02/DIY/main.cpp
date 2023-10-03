@@ -20,16 +20,16 @@ int main() {
    char code[4]{};
    while (getPostalCode(code)) {
        if (load("PCpopulationsComplete.csv", code)) {
-           display();
+            display();
        }
        deallocateMemory();
 
        if (load("PCpopulations.csv")) {
 
-           display();
+            display();
 
        }
 
-       return 0;
+           return 0;
    }
 }
