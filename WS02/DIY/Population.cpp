@@ -25,7 +25,7 @@ namespace sdds {
 
     int noOfRegions;
     Region* regions;
-    int* populate;
+    int* populate{};
     
    /* char test[4];
     */
