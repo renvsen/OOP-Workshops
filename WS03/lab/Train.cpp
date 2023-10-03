@@ -44,13 +44,11 @@ namespace sdds {
 	}
 	void Train::set(const char* name)
 	{
-
-
 		if (name != nullptr && strlen(name) != 0)
 		{
 
-				delete[] trainName;
-				trainName = nullptr;
+			delete[] trainName;
+			trainName = nullptr;
 
 			trainName = new char[strlen(name) + 1];
 			strcpy(trainName, name);
