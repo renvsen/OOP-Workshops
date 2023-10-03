@@ -77,7 +77,7 @@ namespace sdds {
 	}
 	void Train::finalize()
 	{
-		Train::~Train();
+		delete[] trainName;
 	}
 	bool Train::isInvalid() const
 	{
@@ -115,10 +115,4 @@ namespace sdds {
 			cout << "Train in an invalid State!" << endl;
 		}
 	}
-
-	Train::~Train()
-	{
-		delete[] trainName;
-	}
-	
 }

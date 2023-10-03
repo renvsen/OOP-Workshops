@@ -5,7 +5,6 @@ namespace sdds {
 
 	class Train
 	{
-
 	private:
 		char* trainName;
 		int noOfpeople;
@@ -24,7 +23,7 @@ namespace sdds {
 		const char* getName() const;
 		int getDepartureTime() const;
 		void display() const;
-		~Train();
+		
 	};
 }
 
