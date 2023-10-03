@@ -6,7 +6,7 @@ namespace sdds {
 	class Train
 	{
 	private:
-		char* trainName;
+		char* trainName{};
 		int noOfpeople;
 		int departureTime;
 
