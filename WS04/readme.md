@@ -1,5 +1,7 @@
 # Workshop #4: Constructors, Destructors, and the *this* object
 * Version 0.9 (submission is not open yet and the text is under review)
+* Version 1.0 (Submissions will be open by your profs shortly and return type of find_similar is corrected)
+* Version 1.1 (Added costume code submission)
 
 
 ## Learning Outcomes
@@ -88,6 +90,11 @@ valgrind --show-error-list=yes --leak-check=full --show-leak-kinds=all --track-o
 To check the output, use a program that can compare text files.  Search online for such a program for your platform, or use *diff* available on `matrix`.
 
 > Note: All the code written in workshops and the project must be implemented in the **sdds** namespace, unless instructed otherwise.
+
+### Custom code submission
+
+If you have any additional custom code, (i.e. functions, classes etc) that you want to reuse in the workshop save them under a module called Utils (`Utils.cpp and Utils.h`) and submit them with your workshop using the instructions in the "[Submitting Utils Module](#submitting-utils-module)" section.
+
 
 # Part 1 - lab (50%) 
 ## `CarInventory` Module
@@ -194,8 +201,9 @@ This function is to check whether the type, make, brand and year of an object of
 
 Also, implement a global function in the `sdds` namespace to check whether there are duplicate entries in the entire inventory:
 
+
 ```C++
-bool find_similar(CarInventory car[], const int num_cars)
+int find_similar(CarInventory car[], const int num_cars)   
 ```
 
 It returns the index of the first match, if it finds two `CarInventory` objects that have similar information in the car array. See below for the function implementation logic:
@@ -220,6 +228,8 @@ for (int i = 0; i < num_cars; i++){
 
 [correct_output.txt](lab/correct_output.txt)
 
+## LAB Submission (part 1)
+
 ### Files to submit:  
 
 ```Text
@@ -241,6 +251,14 @@ Then, run the following command from your matrix account
 - Replace **sss** with the section: [`naa, nbb, nra, zaa, etc...`]
 
 and follow the instructions.
+
+
+#### Submitting Utils Module
+To have your custom Utils module compiled with your workshop and submitted, add a **u** to the part number of your workshop (i.e **u**p1 for part one and **u**p2 for part two) and issue the following submission command instead of the above:
+```bash
+~profname.proflastname/submit 2??/wX/upY_sss  <ENTER>
+```
+See [Custom Code Submission](#custom-code-submission) section for more detail
 
 
 > **⚠️Important:**  Please note that a successful submission does not guarantee full credit for this workshop. If the professor is not satisfied with your implementation, your professor may ask you to resubmit. Re-submissions will attract a penalty
@@ -381,6 +399,13 @@ Then, run the following command from your matrix account
 - Replace **sss** with the section: [`naa, nbb, nra, zaa, etc...`]
 
 and follow the instructions.
+
+#### Submitting Utils Module
+To have your custom Utils module compiled with your workshop and submitted, add a **u** to the part number of your workshop (i.e **u**p1 for part one and **u**p2 for part two) and issue the following submission command instead of the above:
+```bash
+~profname.proflastname/submit 2??/wX/upY_sss  <ENTER>
+```
+See [Custom Code Submission](#custom-code-submission) section for more detail
 
 
 > **⚠️Important:**  Please note that a successful submission does not guarantee full credit for this workshop. If the professor is not satisfied with your implementation, your professor may ask you to resubmit. Re-submissions will attract a penalty

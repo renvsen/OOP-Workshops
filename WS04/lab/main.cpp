@@ -1,5 +1,5 @@
 /***********************************************************************
-// OOP244 Workshop #3 lab (part 1): tester program
+// OOP244 Workshop #4 lab (part 1): tester program
 //
 // File  main.cpp
 // Version 1.0
