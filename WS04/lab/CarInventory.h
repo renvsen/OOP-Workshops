@@ -6,9 +6,9 @@ namespace sdds
 	class CarInventory
 	{
 	private:
-		char* m_type;
-		char* m_brand;
-		char* m_model;
+		char* m_type{};
+		char* m_brand{};
+		char* m_model{};
 		int m_year;
 		int m_code;
 		double m_price;
