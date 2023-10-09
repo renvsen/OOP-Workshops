@@ -43,7 +43,8 @@ namespace sdds
 			m_price = price;
 		}
 	}
-	CarInventory::CarInventory(const char* type, const char* brand, const char* model)
+	//function overload for only 3 arguments
+	/*CarInventory::CarInventory(const char* type, const char* brand, const char* model)
 	{
 		CarInventory::resetInfo();
 		if (type != NULL)
@@ -66,7 +67,7 @@ namespace sdds
 		m_year = 2022;
 		m_code = 100;
 		m_price = 1.0;
-	}
+	}*/
 	CarInventory& setInfo(const char* type, const char* brand, const char* model, int year, int code, double price)
 	{
 
