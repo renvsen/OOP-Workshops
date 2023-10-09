@@ -47,7 +47,7 @@ namespace sdds {
 		if (name != nullptr && strlen(name) != 0)
 		{
 
-			delete[] trainName;
+			delete[] this->trainName;
 			trainName = nullptr;
 
 			trainName = new char[strlen(name) + 1];
