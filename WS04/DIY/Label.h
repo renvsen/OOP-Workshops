@@ -15,6 +15,8 @@ namespace sdds {
 		std::ostream& printLabel()const;
 		Label& text(const char* content);
 		~Label();
+		void setTextContent(char* textContent);
+		void finalize();
 	private:
 		const char* border;
 		char* textContent;

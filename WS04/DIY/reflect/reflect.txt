@@ -1,0 +1,7 @@
+From this workshop, I learned about constructors, destructors, and this object. With constructors I learned that they are what initializes the class. If they are not defined in the code they will be implicitly made by the compiler and be given empty code like the destructor. However, the difference with constructors  from destructors is that they can be overloaded and be given arguments to modify specific data members of the class. They are good for initializing when given only specific data members.
+
+With destructors, I learned the importance of deallocation. This is called at the end of the program and works backwards to destroy constructed objects. If there is no code given to the destructors they will also be empty like the constructors. 
+
+With this object, I can easily modify the current object and not be confused with the argument that is being passed since they are the same identifier.
+
+Overall, this workshop was very straightforward. The only problem I had that took me some time to understand is including the function header of label to label maker. This is because to make a dynamically allocated array of labels i have to get labels defined in the header file of labelmaker.
