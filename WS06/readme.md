@@ -1,5 +1,5 @@
 # Workshop #6: Classes and resources, IO operators
-# version 1.0
+# version 1.1 Corrected typos
 
 In this workshop, you will implement a class with overloaded constructors. Then you will overload IO operators that will be used to read and write on the screen and files.
 
@@ -222,11 +222,11 @@ Sets the HeathCard object to a recognizable empty (invalid) state by setting **m
     - Ignore all the remaining characters (up to 1000 characters) or the value of ch (use istr.ignore(int n,char c))
     - Set the istream into a fail state (use istr.setstate(iso::failbit))
 #### ostream& printIDInfo(ostream& ostr)const;
-Inserts the three parts related to the main card number, version code and stock number of the health card information into the **istr** object in the following format:
+Inserts the three parts related to the main card number, version code and stock number of the health card information into the **ostr** object in the following format:
 
 `1234567890-AB, XY7652341`
 
-and then returns the **istr** object reference
+and then returns the **ostr** object reference
 
 
 #### void set(const char* name, long long number, const char vCode[], const char sNumber[]);
@@ -273,7 +273,7 @@ If the current object is in a valid state it inserts the values of the card info
 - At the end, it returns the **ostr** reference
 
 ### istream& read(istream& istr);
-Reads the Contact information in following format:
+Reads the Health Card information in following format:
 - name
 - comma
 - main health number
@@ -301,14 +301,14 @@ Example: `Luke Skywalker,1231231234-XL,AF1234567`
 - at the end return the **istr** reference
 
 ### insertion operator overload
-`ostream& operator<<(ostream& ostr, const Contact& hc);`
+`ostream& operator<<(ostream& ostr, const HealthCard& hc);`
 
 if **hc** is valid it will print it using the **print** function on the screen and not on File, (i.e. onFile is false). Otherwise, it will print `"Invalid Card Number"`.
 
 In the end, it will return the **ostr** reference.
 
 ### extraction operator overload
-`istream& operator>>(istream& istr, Contact& hc)`
+`istream& operator>>(istream& istr, HealthCard& hc)`
 
 returns the **read** method of the **hc** argument.
 

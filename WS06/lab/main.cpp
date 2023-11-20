@@ -40,6 +40,7 @@ int main() {
       cout << "Read " << i - 1 << " out of " << recs << " Records successfully" << endl;
       cout << "Record number " << i << " is invalid!" << endl;
    }
+   goodCardFile.close();
    showFile("goodInfo.csv");
    return 0;
 }
