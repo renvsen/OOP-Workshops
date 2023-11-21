@@ -2,9 +2,13 @@
 #include "LblShape.h"
 
 namespace sdds {
+	const char* LblShape::label()const
+	{
+		return this->m_label;
+	}
 	LblShape::LblShape()
 	{
-
+		this->m_label = nullptr;
 	}
 	LblShape::LblShape(const char* label)
 	{
@@ -14,16 +18,13 @@ namespace sdds {
 	LblShape::~LblShape()
 	{
 		delete[]this->m_label;
+		this->m_label = nullptr;
 	}
 	void LblShape::getSpecs(std::istream& istr)
 	{
-		char c;
-		char string[1000];
-		istr.getline(string, 1000, ',');
-		istr >> c;
-		istr.ignore(1);
-
-		this->m_label = new char[strlen(string) + 1];
-		strcpy(this->m_label, string);
+		std::string string{};
+		std::getline(istr, string, ',');
+		this->m_label = new char[string.length() + 1];
+		strcpy(this->m_label, string.c_str());
 	}
 }

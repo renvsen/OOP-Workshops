@@ -7,24 +7,18 @@ namespace sdds
 	class Line : public LblShape
 	{
 	private:
-		int m_length;
+		int m_length{};
 	public:
 		Line();
 		Line(const char* label, int length);
 		void getSpecs(std::istream& istr);
 		void draw(std::ostream& ostr);
-
+		~Line();
 	};
-
-	Line::Line() : LblShape()
+	Line::~Line()
 	{
-		this->m_length = 0;
-	}
-	Line::Line(const char* label, int length) : LblShape(label)
-	{
-		this->m_length = length;
-	}
 
+	}
 }
 
 #endif // !SDDS_LINE_H

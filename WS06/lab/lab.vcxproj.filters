@@ -26,6 +26,9 @@
     <ClInclude Include="HealthCard.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Header.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="HealthCardInfo.csv">

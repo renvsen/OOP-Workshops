@@ -143,6 +143,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Header.h" />
     <ClInclude Include="HealthCard.h" />
   </ItemGroup>
   <ItemGroup>
