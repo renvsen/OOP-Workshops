@@ -2,7 +2,7 @@
 // OOP244 Workshop # 9: tester program
 //
 // File: main.cpp
-// Version 1.0
+// Version 1.1
 // Date: 11/20/2022	
 // Author: Razi Iqbal	
 // Description: This program demonstrates the concept of Polymorphism 
@@ -12,12 +12,13 @@
 // -----------------------------------------------------------
 // Name            Date            Reason
 // Fardad          2023-11-02       review
+// Fardad          2023-11-21       added namespace sdds
 /////////////////////////////////////////////////////////////////
 ***********************************************************************/
 #include <iostream>
 #include "Student.h"
 #include "Graduate.h"
-
+using namespace sdds;
 void display(Student S ) {
 	S.display( );
 }

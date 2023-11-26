@@ -1,23 +1,19 @@
-# Workshop 9: Derived Class with a Resource
+# Workshop 10: Templates
 
-* Version 1
-* Version 1.1 Added using namespace sdds to main.cpp
+* Version 1.0
 
-In this workshop, you are to code/complete two classes:
-
-- Student: A class that holds the name and age of the student.
-- Graduate: A class which is inherited from the Student class and holds the name of the thesis and the supervisor.
+Implement two function templates in C++ that work together to select and display elements from an array.
 
 ## Learning Outcomes
 
 Upon successful completion of this workshop, you will have demonstrated the abilities to:
 
-- Apply the rule of three to a class and its descendants. 
-- Describe what you have learned in completing this workshop
+- Create a function template
+- Create a function template with multiple typenames
+- Create a function template module
 
 
 ## Submission Policy
-
 
 The workshop is divided into one coding part and one non-coding part:
 
@@ -98,58 +94,49 @@ If you have any additional custom code, (i.e. functions, classes etc) that you w
 
 
 > Note: All the code written in workshops and the project must be implemented in the **sdds** namespace.
+
 # Part 1 - LAB (100%)
 
-## Student Class
-This class holds the name and the age of the student privately. The name is held dynamically. 
+Study and understand all the modules given in this workshop and then:
 
-This class should have at least the following:
+Implement two function templates in C++ that work together to select  and display elements from an array based on a specified key (using operator==). These templates should be defined within a module named "selection".
 
-### Constructors and Methods
-#### A default constructor
-This should set the object to a safe empty state. 
+### Function 1: `select`
+**Purpose**: Create a function template named `select` within the `selection` module that searches an array for all occurrences of a specified key and returns a pointer to a new array containing the indices of these occurrences.
 
-#### A parameterized constructor
-This constructor receives the name and the age of the student.  A copy of the name is dynamically held by the name pointer in the class and the age attribute is set to the age argument.
+**Parameters**:
+- `array[]`: An array of type `arrayType`
+- `key`: The value to search for within the array of type `keyType`
+- `size`: The size of the array of type `size_t`
 
-#### The rule of three
-Implement the rule of three so the allocated memory is managed properly in case of copying, assignment and destruction. Keep in mind that this class is being inherited into a "Graduate" class and the destruction of the student should guarantee that the descendants of the class are destructed properly as well. 
+**Return Value**: A pointer to a dynamically allocated array of `int` containing the indices where `key` is found in `array[]`. The last element of this array must be `-1` to indicate the end of the indices.
 
-#### void display()
-This method simply displays the name and age of the student as follows (if the student's name is "John Doe" and the age is 35):
+**Constraints**:
+- Ensure the returned dynamic array size reflects the number of found keys plus one for the terminator `-1`.
+- Use Constrained Casts where appropriate to store the indices in the returned array (if needed).
+- Manage memory properly to avoid leaks.
 
-```text
-Name: John Doe
-Age: 35
-```
+### Function 2: `csvDisplaySelection`
+**Purpose**: Create a function template named `csvDisplaySelection` within the `selection` module that takes a title and an array and displays the elements at the indices specified in a second array, formatted as a comma-separated list.
 
-## Graduate Class
-This class should inherit from the Student class and hold the name of the supervisor and title of the thesis for this Graduate student dynamically.
+**Parameters**:
+- `title`: A C-style string to be displayed before the list
+- `array[]`: An array of type `arrayType` whose elements will be displayed
+- `indices`: A pointer to an array of `int` containing the indices to be displayed from `array[]`
 
-This class should have at least the following:
+**Behavior**: If `indices` is not null and points to a valid array of indices, display the elements at those indices, separated by commas. If `indices` is null or points to an empty selection, display `"Empty Selection"`.
 
-### Constructors and Methods
-#### A default constructor
-This should set the object to a safe empty state. 
+**Constraints**:
+- Do not alter the signatures of the provided function templates.
+- Ensure proper output formatting as per the given purpose of each function.
+- The function templates must be contained within a module named "selection".
 
-#### A parameterized constructor
-This constructor should be able to appropriately allocate the heap memory for the thesis title and supervisor name along with making these pointers point to the appropriate heap memory. Make sure to map this constructor to the parameterized constructor of the parent class.
+## Submission Requirements
+- Have the `selection` module contain the `select` and `csvDisplaySelection` templates.
+- Ensure your code is well-commented and also explain the logic and functionality of the functions in the part 2 refelection.
 
-#### The rule of three
-Implement the rule of three so the allocated memory is managed properly in case of copying and assignment. Make sure to map this to the appropriate parent operator.
 
-#### void display()
-This method simply displays the name and age of the student along with the Thesis title and name of the supervisor as follows (if the student's name is "Jane Doe", 25 years old, working on "Blackholes and Event Horizon"  under the supervision of "Professor Stephen Hawking".
-
-```text
-Name: Jane Doe
-Age: 25
-Thesis Title: Blackholes and Event Horizon
-Supervisor: Professor Stephen Hawking
----------------------------------------------
-```
-
-## Tester Program
+## Tester program
 
 [main.cpp](./lab/main.cpp)
 
@@ -159,50 +146,47 @@ Supervisor: Professor Stephen Hawking
 
 ## PART 1 Submission (lab)
 
-
 ### Files to submit:  
-
 ```Text
-```Text
+Car.h
+Car.cpp
+Displayable.h
+Displayable.cpp
+EmployeeOffice.h
+EmployeeOffice.cpp
 Student.h
 Student.cpp
-Graduate.h
-Graduate.cpp
 main.cpp
+selection.h
 ```
-
 #### Custom code submission
 
 If you have any additional custom code, (i.e. functions, classes etc) that you want to reuse in this workshop save them under a module called Utils (`Utils.cpp and Utils.h`) and submit them with your workshop using the instructions in the "[Submitting Utils Module](#submitting-utils-module)" section.
 
 ### Data Entry
 
-Follow the instructions in the tester 
+No data entry needed
 
 ### Submission Process:
 
 Upload the files listed above to your `matrix` account. Compile and run your code using the `g++` compiler as shown in [Compiling and Testing Your Program](#compiling-and-testing-your-program) and make sure that everything works properly.
 
-Then, run the following command from your matrix account
-
-```bash
-~profname.proflastname/submit 2??/wX/pY_sss  <ENTER>
+Then, run the following command from your account
+- replace `profname.proflastname` with your professor’s Seneca userid
+- replace **??** with your subject code (2**00** or 2**44**)
+- replace **#** with the workshop number
+- replace **X** with the workshop part number (**1** or **2**) 
+```text
+~profname.proflastname/submit 2??/w#/pX
 ```
-- Replace **??** with your subject code (`00 or 44`)
-- Replace **X** with Workshop number: [`1 to 10`]
-- Replace **Y** with the part number: [`1 or 2`]
-- Replace **sss** with the section: [`naa, nbb, nra, zaa, etc...`]
-
 and follow the instructions.
-
 
 #### Submitting Utils Module
 To have your custom Utils module compiled with your workshop and submitted, add a **u** to the part number of your workshop (i.e **u**p1 for part one and **u**p2 for part two) and issue the following submission command instead of the above:
 ```text
-~profname.proflastname/submit 2??/wX/upY_sss  <ENTER>
+~profname.proflastname/submit 2??/w#/upX
 ```
 See [Custom Code Submission](#custom-code-submission) section for more detail
-
 
 > **⚠️Important:** Please note that a successful submission does not guarantee full credit for this workshop. If the professor is not satisfied with your implementation, your professor may ask you to resubmit. Re-submissions will attract a penalty.
 
@@ -214,7 +198,7 @@ Study your final solutions for each deliverable of the workshop **and the most r
 Create a file named `reflect.txt` that contains your detailed description of the topics that you have learned in completing this workshop and **the project milestones** and mention any issues that caused you difficulty.
 
 
-### Submission Process:
+### Reflection Submission Process (Part 2):
 
 Upload the files listed above to your `matrix` account. Compile and run your code using the `g++` compiler as shown in [Compiling and Testing Your Program](#compiling-and-testing-your-program) and make sure that everything works properly.
 
